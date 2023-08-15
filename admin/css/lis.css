@@ -1,0 +1,562 @@
+/*
+ * @description Default Template
+ * @file        lab.css
+ * @author      Esteem Soft Ltd
+ * @contact     http://esteemsoftbd.com/contact.php
+ * @copyright   Copyright 2011-2023 Esteem Soft Ltd.
+*/
+
+/*Search Button Of Data Tables*/
+input[type="search"] {
+    border: 2px solid #ddd;
+    padding: 3px 5px;
+    border-radius: 5px;
+	outline: none;
+	transition: all .5s ease 0s;
+}
+input[type="search"]:hover,input[type="search"]:focus {
+	border: 2px solid #1B75BB;
+}
+/*Data Table Scrollable in small-devices*/
+@media (max-width: 980px){
+	.dataTables_wrapper{
+		overflow: auto;
+	}
+}
+.table td span.btn-danger, .table td span.btn-success {
+    border-radius: 10px;
+    padding: 3px 10px;
+}
+/*Dropdwon action menu*/
+.action-menu .btn-default {
+    background-color: #07CBC9;
+    color: #fff;
+    border-color: #07CBC9;
+    box-shadow: 0px 2px 5px rgba(0,0,0,.20);
+}
+.action-menu.open .btn-default:hover, .action-menu.open .btn-default:focus,.action-menu .btn-default:hover, .action-menu .btn-default:focus{
+	background-color: #07CBC9;
+	border-color: #07CBC9;
+	color: #fff;
+}
+.action-menu .dropdown-menu li a{
+	color: #07CBC9;
+	padding: 5px 5px;
+}
+.action-menu .dropdown-menu li a:hover {
+    background-color: #07CBC9;
+    color: #fff;
+}
+.dropdown.action-menu {
+    text-align: center;
+}
+.action-menu ul.dropdown-menu {
+    min-width: 100px;
+	padding: 0px;
+	margin-left: -13px;
+}
+.action-menu .btn {
+    padding: 2px 10px;
+    font-size: 15px;
+}
+#invoice-list .dropdown-menu{
+	margin-left: -39px;
+}
+#lab-pending-list ul.dropdown-menu {
+	margin-left: -65px;
+}
+#result-list ul.dropdown-menu {
+    margin-left: -27px;
+}
+@media (min-width: 320px) and (max-width: 480px){
+	#lab-pending-list ul.dropdown-menu {
+		margin-left: -97px;
+	}
+	#result-list ul.dropdown-menu {
+		margin-left: -65px;
+	}
+}
+@media (min-width: 320px) and (max-width: 1280px){
+	.action-menu ul.dropdown-menu {
+		margin-left: -100px;
+	}
+	#po-lists .dropdown-menu{
+		margin-left: -53px;
+	}
+	#invoice-list .dropdown-menu{
+		margin-left: -64px;
+	}	
+}
+@media (min-width: 766px) and (max-width: 1024px){
+	#lab-pending-list ul.dropdown-menu {
+		margin-left: -78px;
+	}
+	#result-list ul.dropdown-menu {
+		margin-left: -65px;
+	}
+}
+@media (min-width: 1280px) and (max-width: 1600px){
+	.action-menu ul.dropdown-menu {
+		margin-left: -39px;
+	}
+	#invoice-list .dropdown-menu{
+		margin-left: -57px;
+	}
+	#lab-pending-list ul.dropdown-menu {
+		margin-left: -86px;
+	}
+	#result-list ul.dropdown-menu {
+		margin-left: -52px;
+	}	
+}
+/*Dashboard Starts*/
+	/*Pending Collection Starts*/
+	.pending-collection-wrapper .table-height-wrapper{
+		height: 200px;
+		min-height: 200px;
+		overflow: overlay;
+	}
+	.card-wrapper.pendingCollection {
+		overflow: visible!important;
+	}
+	.pendingCollection .table thead>tr>th:first-child, .pendingCollection .table tbody>tr>td:first-child,.pendingCollection .table thead>tr>th:nth-child(2),.pendingCollection .table tbody>tr>td:nth-child(2)  {
+		text-align: left!important;
+	}
+	.pendingCollection .table thead>tr>th, .pendingCollection .table tbody>tr>td{
+		padding: 5px;
+	}
+	.pending-collection-wrapper .table {
+		margin: 0;
+	}
+		/*Default Scrollbar Customization*/
+		.pending-collection-wrapper .table-height-wrapper::-webkit-scrollbar {
+			width: 3px;
+		}
+		 
+		.pending-collection-wrapper .table-height-wrapper::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 1px rgba(255,255,255,0.3);
+		}
+		 
+		.pending-collection-wrapper .table-height-wrapper::-webkit-scrollbar-thumb {
+		  background-color: #f7f7f7;
+		  outline: 0px solid slategrey;
+		}
+		.pending-collection-wrapper .table-height-wrapper:hover::-webkit-scrollbar-thumb {
+		  background-color: #07cbc9!important;
+		  outline: 0px solid slategrey;
+		}
+		/*Default Scrollbar Customization*/
+	/*Table Header Fixed On Scroll*/
+	.table-height-wrapper .table {
+	    border-collapse: separate!important;
+	}
+	.table-height-wrapper .table>thead>tr>th {
+	    position: sticky!important;
+	    top: 0;
+	    transform: translateZ(0) !important;
+	    background: #fff;
+	    z-index: 1;
+	    border-bottom: 2px solid #000;
+	}
+	/*Table Header Fixed On Scroll*/
+	.todaysResultPending .table>thead>tr>th {
+	    border-color: #f0463c;
+	}
+	.todaysResultSent .table>thead>tr>th{
+		border-color: #00b446;
+	}
+	/*Pending Collection Ends*/
+	
+	/*Quick Search Starts*/
+	.lab-db .card-wrapper {
+	    padding: 15px;
+	    background: #fff;
+	    color: #000;
+	    border: 1px solid #f0463c;
+	    margin-bottom: 25px;
+	    border-radius: 20px;
+	    box-shadow: 0px 0px 2px rgb(0 0 0 / 30%);
+	    overflow: hidden;
+	}
+	.lab-db .card-wrapper h4 {
+	    color: #000;
+	    padding-bottom: 5px;
+	    font-size: 14px;
+	    font-weight: 600;
+	    margin: 0 0 10px;
+	    text-transform: uppercase;
+	    border-bottom: 1px solid #efefef;
+	}
+	.lab-db .quicksearch{
+		clear: both;
+		overflow: hidden;
+	}
+	.lab-db .quicksearch .form-group {
+		margin: 11px 0;
+	}
+	.card-wrapper.pendingCollection.todaysResultSent {
+	    border-color: #00b446;
+	}
+	/*Quick Search Ends*/
+	/*Todays Investigation Wrapper Starts*/
+	.lab-db .panel {
+	    border: none;
+	    box-shadow: none;
+	}
+	.lab-db .panel-item .panel-heading {
+	    overflow: hidden;
+	    padding: 7px 15px;
+	    border-radius: 20px;
+	}
+	.lab-db .panel-heading {
+	    box-shadow: 1px 3px 7px rgba(0,0,0,.20);
+	    border: none;
+	    border-radius: 20px;
+	    padding: 9px 15px;
+	    text-align: center;
+	}
+	.lab-db .panel-primary>.panel-heading {
+	    color: #fff;
+	    background: linear-gradient(180deg,#1e96d2,#1e78d2);
+	}
+	.lab-db .panel-yellow>.panel-heading {
+	    color: #fff;
+	    background: linear-gradient(180deg,#fabe00,#fa9600);
+	}
+	.lab-db .panel-warning>.panel-heading {
+	    color: #fff;
+	    background: linear-gradient(180deg, #f0643c,#f0463c);
+	}
+	.lab-db .panel-green>.panel-heading {
+	    color: #fff;
+	    background: linear-gradient(180deg,#00d246,#00b446);
+	}
+	.lab-db .item-title>h4 {
+		color: #fff;
+	    font-size: 14px;
+	    font-weight: 600;
+	    border-bottom: 1px solid #fff;
+	    text-align: center;
+	    margin: 0;
+	    padding: 5px;
+	}
+	.lab-db .item-info {
+	    padding: 10px 0 0;
+	    overflow: hidden;
+	}
+	.lab-db .panel-item .panel-heading a {
+	    color: #fff;
+	    text-decoration: none;
+	}
+	.lab-db .item-info p {
+	    font-size: 25px;
+	    font-weight: 700;
+	    margin: 0;
+	}
+	@media (min-width:  1920px){
+		.lab-db .item-title>h4 {
+			font-size: 16px;
+		}
+	}
+	/*Todays Investigation Wrapper Ends*/
+	/*Todays Overall Investigation Status Starts*/
+	.overallInvestigation-wrapper .table-responsive{
+		height: 160px!important;
+		min-height: 160px!important;
+		overflow: overlay!important;
+	}
+	.overallInvestigation .table thead>tr>th, .overallInvestigation .table tbody>tr>td {
+	    padding: 5px;
+	}
+	.overallInvestigation .table thead>tr>th:first-child, .overallInvestigation .table tbody>tr>td:first-child {
+		text-align: left!important;
+	}
+	.overallInvestigation-wrapper .table {
+		margin: 0;
+	}
+		/*Default Scrollbar Customization*/
+		.overallInvestigation-wrapper .table-responsive::-webkit-scrollbar {
+			width: 3px;
+		}
+		 
+		.overallInvestigation-wrapper .table-responsive::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 1px rgba(255,255,255,0.3);
+		}
+		 
+		.overallInvestigation-wrapper .table-responsive::-webkit-scrollbar-thumb {
+		  background-color: #45B9AC;
+		  outline: 1px solid slategrey;
+		}
+		/*Default Scrollbar Customization*/
+	/*Todays Overall Investigation Status Ends*/
+	/*Responsive Devices Starts*/
+	@media (min-width: 1600px) and (max-width: 1920px){		
+		.arch-db .card-wrapper .quicksearch:nth-child(2) h4 {
+			padding-top: 20px;
+		}
+	}
+	@media (max-width: 1400px){
+		.arch-db .quicksearch .form-group {
+			margin: 18px 0;
+		}
+		.arch-db .card-wrapper .quicksearch:nth-child(2) h4 {
+			padding-top: 31px;
+		}
+	}
+	@media (max-width: 1024px){
+		.arch-db .quicksearch{
+			clear: both;
+		}
+		.pendingCollection .table tbody>tr>td {
+		    font-size: 12px;
+		}
+	}
+	@media(min-width: 1366px){
+		/*.pendingCollection .table-responsive {
+		    overflow: initial;
+		}*/
+	}
+/*Dashboard Ends*/
+/*Radiology Dashboard Starts*/
+/*.radiology-db .overallInvestigation-wrapper {
+    height: 215px;
+}*/
+.investigation-wrapper .panel-green>.panel-heading {
+    background: linear-gradient(60deg, #FF5252 , #FF6261);
+    border-color: #FF5252;
+}
+.investigation-wrapper .staff-item lead.badge {
+    color: #FF5252;
+}
+.investigation-wrapper .panel-red .panel-heading {
+    border-color: #45B9AC;
+    color: #fff;
+    background: linear-gradient(60deg, #45B9AC , #6EC7A4);
+}
+.investigation-wrapper .panel-red .staff-item lead.badge {
+    color: #45B9AC;
+}
+/*Radiology Dashboard Ends*/
+/*Topbar Starts*/
+nav.navbar.navbar-default.navbar-static-top.lab{
+	background: #0ac878;
+}
+.lab .navbar-top-links a.dropdown-toggle:hover, .lab .navbar-top-links a.dropdown-toggle:focus {
+    color: #0ac878!important;
+}
+.lab .dropdown-menu>li>a:hover, .lab .dropdown-menu>li>a:focus {
+    background: #0ac878;
+    color: #fff;
+    outline: 0;
+}
+.lab .dropdown.open .dropdown-menu>li>a:active{
+	background: #0ac878;
+    color: #fff;
+    outline: 0;
+}
+/*Topbar Ends*/
+/*Sidebar Starts*/
+.lab-menu.sidebar ul li a.active, .lab-menu.sidebar ul li a.focus, .lab-menu.sidebar .nav>li>a:hover, .lab-menu.sidebar .nav>li>a:focus{
+	background: #0ac878;
+}
+/*Sidenav Open & Close Starts*/
+a#sidenavOne, a#sidenavTwo {
+    color: #0ac878;
+}
+/*Sidenav Open & Close Ends*/
+/*Lab Collapse Menu Starts*/
+.lab .navbar-toggle{
+	background-color: #f9f9f9; 
+	transition: all .5s ease 0s;
+}
+.navbar-default.lab .navbar-toggle:hover, .navbar-default.lab .navbar-toggle:focus {
+    background-color: #0ac878;
+}
+.navbar-default.lab .navbar-toggle .icon-bar {
+    background-color: #0ac878;
+}
+.navbar-default.lab .navbar-toggle:hover .icon-bar,.navbar-default.lab .navbar-toggle:focus .icon-bar{
+	background-color: #fff;
+} 
+.navbar-default.lab .navbar-toggle {
+    border-color: #fff;
+}
+.lab ul.nav.navbar-top-links.navbar-right {
+    text-align: center;
+	margin-right: 0;
+}
+/*Lab Collapse Menu Ends*/
+/*Custom Table*/
+/*.table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
+    background-color: #e5f4f6!important;
+}*/
+.panel-success table.dataTable tr.odd td.sorting_1 {
+    background: #e5f4f6!important;
+}
+.panel-success .checkbox-wrapper input:checked ~ .checkmark {
+    background-color: #237ce2!important;
+}
+/*Custom Table*/
+/*Search Field*/
+.panel.panel-success .panel-body form .form-group, .panel.panel-success .panel-body form .form-group select.form-control, .panel.panel-success .panel-body .form-group {
+    margin: 0 0 5px 0;
+}
+.panel.panel-success .panel-body form .col-lg-1, .panel.panel-success .panel-body form .col-lg-10, .panel.panel-success .panel-body form .col-lg-11, 
+.panel.panel-success .panel-body form .col-lg-12, .panel.panel-success .panel-body form .col-lg-2, .panel.panel-success .panel-body form .col-lg-3, 
+.panel.panel-success .panel-body form .col-lg-4, .panel.panel-success .panel-body form .col-lg-5, .panel.panel-success .panel-body form .col-lg-6, 
+.panel.panel-success .panel-body form .col-lg-7, .panel.panel-success .panel-body form .col-lg-8, .panel.panel-success .panel-body form .col-lg-9, 
+.panel.panel-success .panel-body form .col-md-1, .panel.panel-success .panel-body form .col-md-10, .panel.panel-success .panel-body form .col-md-11, 
+.panel.panel-success .panel-body form .col-md-12, .panel.panel-success .panel-body form .col-md-2, .panel.panel-success .panel-body form .col-md-3, 
+.panel.panel-success .panel-body form .col-md-4, .panel.panel-success .panel-body form .col-md-5, .panel.panel-success .panel-body form .col-md-6, 
+.panel.panel-success .panel-body form .col-md-7, .panel.panel-success .panel-body form .col-md-8, .panel.panel-success .panel-body form .col-md-9, 
+.panel.panel-success .panel-body form .col-sm-1, .panel.panel-success .panel-body form .col-sm-10, .panel.panel-success .panel-body form .col-sm-11, 
+.panel.panel-success .panel-body form .col-sm-12, .panel.panel-success .panel-body form .col-sm-2, .panel.panel-success .panel-body form .col-sm-3, 
+.panel.panel-success .panel-body form .col-sm-4, .panel.panel-success .panel-body form .col-sm-5, .panel.panel-success .panel-body form .col-sm-6, 
+.panel.panel-success .panel-body form .col-sm-7, .panel.panel-success .panel-body form .col-sm-8, .panel.panel-success .panel-body form .col-sm-9, 
+.panel.panel-success .panel-body form .col-xs-1, .panel.panel-success .panel-body form .col-xs-10, .panel.panel-success .panel-body form .col-xs-11, 
+.panel.panel-success .panel-body form .col-xs-12, .panel.panel-success .panel-body form .col-xs-2, .panel.panel-success .panel-body form .col-xs-3, 
+.panel.panel-success .panel-body form .col-xs-4, .panel.panel-success .panel-body form .col-xs-5, .panel.panel-success .panel-body form .col-xs-6, 
+.panel.panel-success .panel-body form .col-xs-7, .panel.panel-success .panel-body form .col-xs-8, .panel.panel-success .panel-body form .col-xs-9{
+    padding: 0 5px;
+}
+/*Search Field*/
+/*Responsive Devices Starts*/
+	@media (min-width: 1600px) and (max-width: 1920px){
+		/*#page-wrapper{
+			height: 100vh;
+		} */
+	}
+	@media (max-width: 1400px){
+		.quicksearch .form-group {
+			margin: 18px 0;
+		}
+	}
+	@media (max-width: 1024px){
+		.quicksearch{
+			clear: both;
+		}
+	}
+
+/*Panel left, Panel Right, Panel Custom Table style of Pop Up window*/
+	.panel-left, .panel-right {
+        border-radius: 15px;        
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        min-height: 18em;
+    }    
+    .panel-left{
+        border: 2px solid #45B9AC;
+    }
+    .panel-right{
+        border: 2px solid #FF5252;
+    }
+    .panel-left h4, .panel-right h4 {
+        margin: 0;
+        font-size: 16px;
+    }
+    .panel-left h4>span, .panel-right h4>span {
+        background: #fff;
+        color: #555;
+        padding: 1px 10px;
+        border-radius: 30px;
+        font-weight: 700;
+        float: right;
+        font-size: 14px;
+    }
+    .panel-left .item-list>label, .panel-left .item-list>h5 {
+        margin: 0;
+    }
+    .panel-left .item-list {
+        margin-bottom: 16px;
+    }
+    .panel-left .item-list>label {
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #636363;
+    }
+    .panel-left .item-list>h5 {
+        font-size: 15px;
+        font-weight: 700;
+        color: #555;
+    }
+    .panel-left .item-list.total-due>h5 {
+        color: #FF5252;
+        border-top: 1px solid #efefef;
+        padding-top: 10px;
+        text-align: center;
+        font-size: 17px;
+    }
+    .panel-left .panel-heading {
+        background: linear-gradient(60deg, #45B9AC , #6EC7A4);
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
+        border: none;
+    }
+
+    .panel-right>.panel-heading {
+        background: linear-gradient(60deg, #FF5252 , #FF6261);
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
+        border: none;
+    }
+    .panel-right .money-information label {
+        margin: 0;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #636363;
+    }
+    .panel-right .money-information td>p {
+        color: #555;
+        font-weight: 700;
+        font-size: 15px;
+        margin: 0 0 2px;
+    }
+    .panel-right .table>tbody>tr:first-child td {
+        border-top: none!important;
+    }
+    .panel-right .table>tbody>tr>td {
+        text-align: left!important;
+    }
+    .panel-custom-table {
+        border-radius: 15px;
+        border: 2px solid #237CE2;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .panel-custom-table .panel-heading {
+        border-top-right-radius: 13px;
+        border-top-left-radius: 13px;
+        border: none;
+    }
+    .panel-custom-table thead tr>th {
+        text-transform: uppercase;
+        border-bottom: 3px solid #237CE2;
+    }
+ /*Reagent Stock finish blinking*/
+.table tbody tr td.stock-finish {
+    background-color: red;
+    color: #fff;
+    text-align: center;
+}
+.table tbody tr td.stock-running-out {
+    background-color: #FFB702;
+    color: #fff;
+    text-align: center;
+}
+.table tbody tr td.stock-available {
+    background-color: #35B631;
+    color: #fff;
+    text-align: center;
+}
+@keyframes stock-finish {
+    0%   { background-color: #f14541; }
+    49% { background-color: #f14541; }
+    50% { background-color: #d61410; }
+    99% { background-color: #d61410; }
+    100% { background-color: #f14541; }
+  }
+.table tbody tr td.stock-finish{
+	animation: stock-finish 2s infinite;
+}   	
+
+

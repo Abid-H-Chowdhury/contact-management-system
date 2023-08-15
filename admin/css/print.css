@@ -1,0 +1,78 @@
+/*
+ * @description Custom stylesheet
+ * @file        print.css
+ * @author      Esteem Soft Limited
+ * @contact     http://esteemsoftbd.com/contact.php
+ * @copyright   Copyright 2011-2017 Esteem Soft Limited.
+*/
+@media print  {
+  lable{
+    font-weight: 600;
+  }
+  .printing_option {
+    display: block;
+  }
+
+.col-lg-6 {
+  width: 50%;
+  float: left;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 11px;
+    line-height: 1.22857;
+}
+.col-md-2{
+  width: 20%;
+  float: left;
+}
+.col-md-3{
+  width: 25%;
+  float: left;
+}
+.col-md-4{
+  width: 33.33333%;
+  float: left;
+}
+.form-control {
+  font-size: 12px;
+}
+.input-group-btn .btn {
+    padding: 12px 12px;
+}
+.table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, .table tfoot > tr > td {
+  border-top: 1px solid #ddd;
+  line-height: 1.1;
+  font-family: "Arial",Helvetica,sans-serif;
+  padding: 4px;
+  vertical-align: top;
+  font-size: 10px;  
+}
+h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+.form-group label.radio-inline{
+	display: inline!important;
+}
+.panel-info>.panel-heading {
+    color: #fff!important;
+    background: linear-gradient(145deg,#68ccdf,#92dae8)!important;
+}
+.panel-info>.panel-heading >i{
+	color: #fff!important;
+}
+.table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, .table tfoot > tr > td {
+  border-top: 1px solid #ddd;
+  line-height: 1.1;
+  padding: 6px;
+  vertical-align: top;
+}
+
+}
+
+

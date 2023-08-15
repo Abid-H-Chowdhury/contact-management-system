@@ -1,0 +1,99 @@
+<?php
+defined('SUBDOMAIN')   ? null : define("SUBDOMAIN", "arch");
+// Database Constants
+defined('DB_SERVER') ? null : define("DB_SERVER", "localhost");
+defined('DB_USER')   ? null : define("DB_USER", "root");
+defined('DB_PASS')   ? null : define("DB_PASS", "");
+defined('DB_NAME')   ? null : define("DB_NAME", "lis"); //ahms_royal
+
+// Setup primary info
+defined('MAIN_TITLE')   ? null : define("MAIN_TITLE", "The Arch Hospital");
+defined('COMPANY')   ? null : define("COMPANY", "The Arch Hospital");
+defined('COMPANY_PHONE')   ? null : define("COMPANY_PHONE", "01873763307");
+defined('COMPANY_MAIL')   ? null : define("COMPANY_MAIL", "info@archhospital.com");
+defined('COMPANY_ADDRESS')   ? null : define("COMPANY_ADDRESS", "Block A, Bashundhara, Dhaka");
+
+defined('ZILLA')   ? null : define("ZILLA", 27);
+defined('THANA')   ? null : define("THANA", 410);
+defined('CURRENCY')   ? null : define("CURRENCY", " BDT");
+defined('CURRENCY_SIGN')   ? null : define("CURRENCY_SIGN", " &#2547");
+//defined('SITE_URL')   ? null : define("SITE_URL", "http://192.168.1.5/ahms/"); //localhost 192.168.1.2
+
+if($_SERVER['SERVER_NAME']=="localhost"){
+    defined('SITE_URL')   ? null : define("SITE_URL", "http://localhost/ahms/"); //http://localhost 192.168.0.2
+}elseif($_SERVER['SERVER_NAME']=="witty.com"){
+    defined('SITE_URL')   ? null : define("SITE_URL", "http://localhost/ahms/"); //http://localhost 192.168.0.2
+}else{
+    defined('SITE_URL')   ? null : define("SITE_URL", "http://192.168.1.5/ahms/"); //http://localhost 192.168.0.2
+}
+defined('UPLOADS_URL')   ? null : define("UPLOADS_URL", SITE_URL."uploads/".SUBDOMAIN."/");
+
+defined('SMS_ENDING')   ? null : define("SMS_ENDING", "My Company");
+defined('PHARMA_COUNTER')   ? null : define("PHARMA_COUNTER", 4);
+defined('CASH_IN_TYPE')   ? null : define("CASH_IN_TYPE", 1);
+
+// some important info settings
+date_default_timezone_set("Asia/Dhaka");
+$FormAction = htmlspecialchars($_SERVER['PHP_SELF']);
+$SUPER_ADMIN = array("A1611001", "a");
+$date = date("Y-m-d");
+$time = date("Y-m-d H:i:s"); // H= 24 , h =12
+$END_FISCAL_YEAR = date("Y")-1;
+defined('BEGINNING_FISCAL')   ? null : define("BEGINNING_FISCAL", "2010-01-01");
+defined('START_FISCAL')   ? null : define("START_FISCAL", "2016-01-01");
+defined('END_FISCAL')   ? null : define("END_FISCAL", $END_FISCAL_YEAR."-12-31");
+
+class Config
+{
+    // Account settings
+    public static $shead_add_permission = 0; // account setting subhead adding permission to customer
+	public static $DEFAULT_CASH_OUT = 1;
+    public static $currency_decimal = 0;
+    
+    // Module settings
+    public static $MODULE_LAB = 0; // 1=active lab module, 0=not
+    
+    // HRM
+    public static $DAYS = array("sat"=>"Saturday","sun"=>"Sunday","mon"=>"Monday","tue"=>"Tuesday","wed"=>"Wednesday","thu"=>"Thursday","fri"=>"Friday");
+    
+    //////////////////////////// E-Mail Configurations ///////////////////////            
+    public static $EMAIL_HOST = "server.awtsoft.com";  
+    public static $EMAIL_PORT = "465";
+    public static $EMAIL_FROM = "no-reply@esteemsoftbd.com";
+    public static $EMAIL_USER = "no-reply@esteemsoftbd.com";  
+    public static $EMAIL_PASS = 'x^XA=7x9UpC?'; 
+
+    public static $ONLINE_PAYMENT_USERID = "1"; // ac_income table userID
+    public static $ONLINE_PAYMENT_BANKID = "1"; // banks cash IN bankID default 1=Cash In Hand
+     public static $ONLINE_PAYMENT_URL = "http://192.168.1.5/ahms/portal/index.php?page=";
+     public static $ONLINE_PAYMENT_METHODS = array("bkash"=>"Bkash",
+                                                "mastercard"=>"Master Card",
+                                                "visacard"=>"Visa Card",
+                                                "amexcard"=>"American Express",
+                                                "dbblmobilebanking"=>"Rocket",
+                                                "brac_visa"=>"Brac Visa",
+                                                "dbbl_visa"=>"DBBL Visa",
+                                                "city_visa"=>"City Visa",
+                                                "ebl_visa"=>"EBL Visa",
+                                                "sbl_visa"=>"SBL Visa",
+                                                "brac_master"=>"Brac Master",
+                                                "dbbl_master"=>"DBBL Master",
+                                                "dbbl_nexus"=>"DBBL Nexus",
+                                                "city_master"=>"City Master",
+                                                "ebl_master"=>"EBL Master",
+                                                "sbl_master"=>"SBL Master",
+                                                "city_amex"=>"American Express",
+                                                "qcash"=>"Qcash",
+                                                "bankasia"=>"Bank Asia",
+                                                "abbank"=>"AB Bank",
+                                                "ibbl"=>"Islami Bank Bangladesh Ltd",
+                                                "mtbl"=>"Mutual Trust Bank",
+                                                "city"=>"City Bank"); 
+}
+
+//HRM 
+class Printing{
+    public static $hrm_salary_bankslip_header_top_margin = "100";
+    public static $hrm_salary_bankslip_footer_bottom_space = "50";
+}
+?>

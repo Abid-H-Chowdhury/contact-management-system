@@ -1,0 +1,200 @@
+/*
+ * @description Default Template
+ * @file        lab-print-a4.css
+ * @author      Esteem Soft Ltd
+ * @contact     http://esteemsoftbd.com/contact.php
+ * @copyright   Copyright 2011-2020 Esteem Soft Ltd.
+*/
+
+/*Company Logo Starts*/
+.company-logo h2.card-title{
+	margin: 1em 0 0;
+}
+.company-logo h2.card-title>span {
+    padding: 2px 20px;
+    font-size: 18px;
+	font-family: Courier New;
+}
+.company-logo h2.card-title>span.header {
+    border: 2px solid #555;
+    padding: 2px 20px;
+    font-size: 22px;
+	font-family: Courier New;
+    text-transform: uppercase;
+}
+.company-logo p.reportId {
+	font-size: 15px;
+    text-align: center;
+    margin: 1em 0;
+}
+.report-title > h2.card-title{
+    margin: .5em 0 0;
+    line-height: 15px;
+}
+.report-title > h2.card-title>span.header {
+    border: 2px solid #555;
+    padding: 0 20px;
+    font-size: 20px;
+    font-family: Courier New;
+    text-transform: uppercase;
+}
+/*Company Logo Ends*/
+/*Patient Info Starts*/
+.patient-info>h5>span.uhidno {
+    font-size: 14px;
+    line-height: 20px;
+    border: 1px solid #333;
+    padding: 2px 3px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.patient-info>h5 {
+	font-family: Courier New;
+	font-size: 13px;
+    color: #555;
+    font-weight: 600;
+	margin: 4px 0;
+}
+.patient-info h5>small.uhid {
+    font-size: 12px;
+    font-weight: 600;
+}
+/*Patient Info Ends*/
+/*Report Results Starts*/
+h6.report-method{
+	font-family: Courier New;
+	font-size: 12px;
+    border: 1px solid #555;
+    padding: 3px;
+}
+.report-results {
+    overflow: hidden;
+    margin: 2em 0;
+	font-family: Courier New;
+}
+.report-results > .col-xs-12 {
+    padding: 0 5px;
+}
+.report-results h4 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 3px;
+}
+.report-results .table{
+	font-family: Courier New;
+}
+.report-results .table>thead>tr>th {
+	font-family: Courier New;
+    font-weight: 600;
+    font-size: 17px;
+	padding: 5px 0;
+}
+.report-results .table>tbody>tr>td {
+	font-family: Courier New;
+    font-size: 16px;
+    vertical-align: middle;
+    padding: 5px!important;
+    color: #000000;
+    font-weight: 500;
+}
+/*Report Results Ends*/
+/*Report Checker Starts*/
+.report-checker {
+    position: inherit;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.checker-info>h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+.checker-info>h5 {
+    margin: 5px 0 0;
+    font-weight: 600;
+}
+.checker-info h6{
+	margin: 0 0 2px;
+}
+.footer-print{
+	border-top: 1px solid #555;
+	padding-top: 5px;
+}
+.footer-print p {
+    font-size: 10px;
+    margin: 0;
+}
+.footer-companyInfo h6{
+	font-size: 11px;
+	margin: 15px 0 0;
+}
+/*Report Checker Ends*/
+
+@media print{
+	.company-logo h2.card-title{
+		font-size: 24px;
+	}
+    /*Patient Info Starts*/
+    .patient-info>h5 {
+    	font-size: 12px;
+        color: #555;
+        font-weight: 600;
+    	margin: 4px 0;
+    }
+    .patient-info h5>small.uhid {
+        font-size: 11px;
+        font-weight: 600;
+    }
+	.patient-info h5>small.uhid {
+		color: #555!important;
+	}
+    .company-logo h2.card-title>span {
+        padding: 2px 20px;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .company-logo h2.card-title>span.header {
+        border: 2px solid #555;
+        padding: 2px 20px;
+        font-size: 22px;
+    	font-family: Courier New;
+        text-transform: uppercase;
+    }
+	.report-results{
+		font-family: Courier New;
+	}
+    .report-results .table>thead>tr>th {
+        font-weight: 600;
+        font-size: 17px;
+    	padding: 5px 0;
+		font-family: Courier New;
+    }
+    .report-results .table>tbody>tr>td {
+        font-size: 15px;
+        vertical-align: middle;
+        padding: 5px!important;
+		font-family: Courier New;
+        color: #000000;
+        font-weight: 600;
+    }
+    .report-results .table>tbody>tr>td.testSubhead {
+        font-weight: normal;
+    }
+    .report-results .table>tbody>tr>td.reportREsult {
+        font-weight: normal;
+    }
+	.report-checker {
+		text-align: left;
+		position: fixed;
+	}
+	@page{
+		size: a4 portrait;
+	}
+	
+}
+
+
+
+
